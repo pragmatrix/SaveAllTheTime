@@ -47,7 +47,7 @@ namespace SaveAllTheTime
         /// </summary>
         HashSet<IVsWindowFrame> _vsWindowFrameSet = new HashSet<IVsWindowFrame>();
 
-        readonly HashSet<string> _sessionDocumentsLookup = new HashSet<string>();
+        readonly HashSet<string> _sessionDocumentsLookup = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
 
         [ImportingConstructor]
         internal DocumentMonitorService(SVsServiceProvider vsServiceProvider, ICompletionBroker completionBroker)

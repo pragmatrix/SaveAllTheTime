@@ -52,7 +52,7 @@ namespace SaveAllTheTime
                     .Where(z => z.Value != null)
                     .Select(z => z.Value.ToString()));
 
-            return new HashSet<string>(projectItems);
+            return new HashSet<string>(projectItems, StringComparer.InvariantCultureIgnoreCase);
         }
 
         internal static IEnumerable<Project> AllProjects(this Solution solution)
