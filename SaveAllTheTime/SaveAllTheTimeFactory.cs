@@ -12,6 +12,7 @@ using System.Diagnostics;
 
 namespace SaveAllTheTime
 {
+#if false
     /// <summary>
     /// Establishes an <see cref="IAdornmentLayer"/> to place the adornment on and exports the <see cref="IWpfTextViewCreationListener"/>
     /// that instantiates the adornment on the event of a <see cref="IWpfTextView"/>'s creation
@@ -47,6 +48,7 @@ namespace SaveAllTheTime
             new SaveAllTheTimeAdornment(textView, _vsOps);
         }
     }
+#endif
 
     // NB: This class name is Magical, don't change it. Fody looks for it and
     // writes in a .NET Module Initializer
